@@ -1,12 +1,14 @@
 # CharFilter-DEMO-WEB
 #### 这是一个游戏账号筛选系统的功能页面之一  
-## 入口页面 [预览效果](https://monokmm.github.io/CharFilter-DEMO-WEB/)  
+## 想看看筛选功能 访问这里： [预览效果](https://monokmm.github.io/CharFilter-DEMO-WEB/)  
+## 对筛选插件CharFilter感兴趣 访问这里：[插件项目](https://github.com/MonoKmm/CharFliter/blob/master/README.md)  
 
-采用响应式设计，页面自适应移动端至PC端的分辨率  
+采用响应式设计，页面自适应移动端至PC端的分辨率  
 
-Chrome 版本 56.0.2924.87 (64-bit) 测试通过  
-Safari 版本 10.0.3 (12602.4.8) 测试中  
-
+Chrome (Mac)版本 56.0.2924.87 (64-bit) 测试通过  
+Safari (Mac)版本 10.0.3 (12602.4.8)    测试中  
+Safari (iPhone)版本 IOS 10             测试通过  
+  
 ### 页面分为三部分:
 #### 1.货架 shelf  
      点击货架内的角色添加至购物车

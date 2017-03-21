@@ -120,10 +120,10 @@
                 return cartArrHis.pop();
             }
         },
-        dataFilter: function (rest,mode) {
+        dataFilter: function (rest,mode,arr) {
             // console.log(this.data);
             var list = this.data.list;
-            var cartArr = this.cartArr;
+            var cartArr = arr instanceof Array ? arr : this.cartArr;
             var cache,
                 fliter1=[],
                 fliter2=[],
@@ -226,7 +226,7 @@
         util: {//公共接口方法
             unique: function (narr) {
 
-                if (typeof narr == 'object') {
+                if ( narr instanceof Array) {
                     var arr = narr.slice(0);
                     var robj = {}, rarr = [];
                     for (var i = 0, len = arr.length; i < len; i++) {

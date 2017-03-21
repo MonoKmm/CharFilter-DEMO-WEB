@@ -1,5 +1,5 @@
 /**
- * Created by xuanfenghuang on 2017/3/9.
+ * Created by MonoKmm on 2017/3/9.
  */
 (function ($) {
     $(document).ready(function () {
@@ -10,7 +10,7 @@
         // DomInit
         // ***************************************
         var charArr = [];
-        var creaDom = function (data) {
+        var createDom = function (data) {
             // console.log(data);
             charArr = data;
             var htmlShelf = '';
@@ -24,6 +24,7 @@
             htmlCart = fnCreateHtml({'type':'photo-none'},10);
             $cfcart.data('empCache',htmlCart).html(htmlCart);
             $cfshelf.html(htmlShelf);
+            fnSearch(["no0595","no0596"]);
         };
             // <img src="image/no0595.jpg">
             // <div class="photo"><img scr="image/no0595.jpg" alt=""></div>
@@ -65,7 +66,6 @@
                 switch (last['type']){
                     case 'add':
                         // console.log('撤销增加');
-                        var cartlen = cf.getCart(false);
                         var cartnum = cf.getCart(true);
                         $cfcart.children().eq(cartnum).remove();
                         $cfcart.append(fnCreateHtml({'type':'photo-none'},1));
@@ -95,10 +95,10 @@
                 }
             }
         };
-        var fnSearch = function () {
+        var fnSearch = function (arr) {
             var tr = '',
                 item;
-            var reslut = cf.dataFilter(true,'script');
+            var reslut = cf.dataFilter(true,'script',arr instanceof Array ? arr : null);
             var reslutArr = reslut['arr'];
 
             for(let i=0,len=reslutArr.length;i<len;i++){
@@ -191,7 +191,7 @@
             });
             return dtd.promise();
         };
-        initData().done(creaDom);
+        initData().done(createDom);
 
 
     });

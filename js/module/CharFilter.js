@@ -189,13 +189,12 @@
             }
             return result;
         },
+        //获取筛选json数组
         getDataList: function (atr,fn) {
                 this.addHandler("loaded", function (data) {
                     var subobj = data[atr];
-                    // console.log(subobj);
                     return fn(subobj);
                 });
-                // console.log(this);
                 this.getData(null,true);
         },
         getStatus: function () {

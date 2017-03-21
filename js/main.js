@@ -95,7 +95,7 @@
                 }
             }
         };
-        var fnSearch = function (arr) {
+        var fnSearch = function (boolearn,arr) {
             var tr = '',
                 item;
             var reslut = cf.dataFilter(true,'script',arr instanceof Array ? arr : null);
@@ -143,6 +143,14 @@
                         fnUndo();
                         break;
                     case 'control-search':
+                        var mOrp = '';
+                        var $btn = $('#cf-cart-toggle-btn');
+                        if ($btn.css('display') == 'block'){
+                            $btn.trigger('click');
+                            $("html,body").animate({scrollTop: $('#cf-text').offset().top +110}, 1000);
+                        }else {
+                            $("html,body").animate({scrollTop: $('#cf-control').offset().top }, 1000);
+                        }
                         fnSearch();
                         break;
                     default:

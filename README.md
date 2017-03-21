@@ -1,8 +1,8 @@
 # CharFilter-DEMO-WEB
 #### 这是一个游戏账号筛选系统的功能页面之一  
 采用响应式设计，页面自适应移动端至PC端的分辨率  
+
 &nbsp;入口页面 [预览效果](https://monokmm.github.io/CharFilter-DEMO-WEB/) 
-&nbsp; [index.html](https://github.com/MonoKmm/CharFilter-DEMO-WEB/blob/master/index.html)  
 
 Chrome 版本 56.0.2924.87 (64-bit) 测试通过  
 

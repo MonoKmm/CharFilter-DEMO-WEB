@@ -10,18 +10,15 @@
     }
 
     EventTarget.prototype.addHandler = function (type, handler) {
-        // console.log(handler);
         if (typeof this.handlers[type] == "undefined") {
             this.handlers[type] = [];
         }
         this.handlers[type].push(handler);
-        // console.log(that.handlers)
     };
     EventTarget.prototype.fire = function (event) {
         if (!event.target) {
             event.target = this;
         }
-        // console.log(this);
         if (this.handlers[event.type] instanceof Array) {
             var handlers = this.handlers[event.type];
             for (var i = 0, len = handlers.length; i < len; i++) {
@@ -37,7 +34,6 @@
         this.data = {};
         this.option = {};
         EventTarget.call(this);
-        // console.log(this);
         this.fnInit(option, fn);
     };
     //inherit
@@ -54,8 +50,6 @@
             for (var p in oDefault) {
                 this.option[p] = _option[p] || oDefault[p]
             }
-            // console.log(this);
-            // this.getData();
         },
         getCart: function (swich) {
             var result = this.cartArr.slice();
@@ -78,13 +72,10 @@
                 var cartArr = this.cartArr;
                 var cartArrHis =this.cartArrHis;
                 var last = cartArrHis.pop();
-                console.log(last);
                 if(last.type == 'emp'){
 
                 }
             }
-            // console.log('添加⬇️');
-            // console.log(this.cartArr);
             return this.cartArr.length;
         },
         deleteItem: function (target,pos,his) {
@@ -96,7 +87,6 @@
                         this.cartArrHis.splice(0,1);
                     }
                 }
-                // console.log(pos);
                 cartArr.splice(pos,1);
 
             }else if (target === true){
@@ -104,24 +94,19 @@
                     item:this.cartArr.splice(0),
                     type:'emp'
                 });
-                // console.log('删除⬇️');
                 if(this.cartArrHis.length>5){
                     this.cartArrHis.splice(0,1);
                 }
-                console.log(this.cartArr);
             }
-            // console.log(this.cartArrHis);
 
         },
         undoItem: function () {
             var cartArrHis = this.cartArrHis;
             if (cartArrHis.length>0){
-                // console.log(cartArrHis);
                 return cartArrHis.pop();
             }
         },
         dataFilter: function (rest,mode,arr) {
-            // console.log(this.data);
             var list = this.data.list;
             var cartArr = arr instanceof Array ? arr : this.cartArr;
             var cache,
@@ -148,9 +133,7 @@
                             ((cache in list[fliter1[i]] ) && ( list[fliter1[i]][cache] >= count )) :
                             ( cache in list[fliter1[i]] ) )
                     {
-                        // console.log('搜索'+cache);
                         fliter2.push(fliter1[i]);
-                        // console.log(fliter2);
                     }
                 }
                 //检测购物车中只有复数同角色情况
@@ -176,8 +159,6 @@
                         fliter1 = fliter2.splice(0);
                     }
                 }
-                // console.log(fliter1);
-                // console.log(fliter2);
 
             }
             if ( !('type' in result) ){
@@ -203,7 +184,6 @@
         getData: function (fn, fire) {
             var that = this;
             if (!!that.data.length){
-                console.log(this);
                 setTimeout(function () {
                     that.fire({type: "loaded",message:that.data});
                 },0)
@@ -212,7 +192,6 @@
                     var dataObj = eval(data)[0];
                     that.data = dataObj;
                     if (fire) {
-                        // console.log(that);
                         that.fire({type: "loaded",message:dataObj});
                     }
                     if (typeof fn == 'function') {

@@ -11,7 +11,6 @@
         // ***************************************
         var charArr = [];
         var createDom = function (data) {
-            // console.log(data);
             charArr = data;
             var htmlShelf = '';
             var htmlCart = '';
@@ -42,7 +41,6 @@
                         var num = opt.arr[i];
                         html += '<div class="photo"><img data-num="'+ num +'"src="image/char/'+ num +'.jpg" alt=""></div>'
                     }
-                    // console.log(html);
                     return html;
                 case 'img':
                     $.extend()
@@ -62,31 +60,23 @@
         var fnUndo =function () {
             var last = cf.undoItem();
             if (!!last){
-                // console.log(last);
                 switch (last['type']){
                     case 'add':
-                        // console.log('撤销增加');
                         var cartnum = cf.getCart(true);
                         $cfcart.children().eq(cartnum).remove();
                         $cfcart.append(fnCreateHtml({'type':'photo-none'},1));
                         cf.deleteItem('target',null,false);
-                        // console.log(cf.cartArr);
-                        // console.log(cf.getCart());
                         break;
                     case 'del':
-                        // console.log('撤销删除');
                         var $child = $cfcart.children();
                         var cartnum = cf.getCart(true);
-                        // console.log(cartnum);
                         if(cartnum<9){
                             $child.eq(9).remove();
                             $child.eq(cartnum).after(fnCreateHtml({'type':'photo','arr':last.item},1));
                             cf.addItem(last.item[0],false);
                         }
-                        // console.log(cf.cartArr);
                         break;
                     case 'emp':
-                        // console.log('撤销清空');
                         cf.addItem(true,false);
                         $cfcart.html($cfcart.data('prev'));
                         break;
@@ -139,7 +129,6 @@
                         fnRemove();
                         break;
                     case 'control-undo':
-                        // console.log('撤销');
                         fnUndo();
                         break;
                     case 'control-search':

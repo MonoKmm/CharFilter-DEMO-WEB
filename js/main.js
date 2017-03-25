@@ -23,7 +23,7 @@
             htmlCart = fnCreateHtml({'type':'photo-none'},10);
             $cfcart.data('empCache',htmlCart).html(htmlCart);
             $cfshelf.html(htmlShelf);
-            fnSearch(["no0595","no0596"]);
+            fnSearch('init',["no701"]);
         };
             // <img src="image/no0595.jpg">
             // <div class="photo"><img scr="image/no0595.jpg" alt=""></div>
@@ -85,12 +85,22 @@
                 }
             }
         };
-        var fnSearch = function (boolearn,arr) {
+        var fnSearch = function (mode,arr) {
             var tr = '',
                 item;
             var reslut = cf.dataFilter(true,'script',arr instanceof Array ? arr : null);
             var reslutArr = reslut['arr'];
+            var $table_massage = $('.table-massage');
+            if(mode == 'custom'){
+                if( 'type' in reslut && reslut['type'] == 'similar'){
 
+                    $table_massage.hide().eq(0).show();
+                }else {
+                    $table_massage.hide().eq(1).show();
+                }
+            }else if(mode == 'init'){
+                $table_massage.hide().eq(2).show();
+            }
             for(let i=0,len=reslutArr.length;i<len;i++){
                 let cArr=[];
                 item = reslutArr[i];
@@ -108,7 +118,8 @@
             var $tbody = $('#cf-list tbody');
             $tbody.empty().append(tr);
             //show thead
-            $('#cf-list thead').show();
+            // $('#cf-list').animate({height: 'show'}, 'slow');
+            // $('#cf-list thead');
             console.log(reslut);
         };
         // ***************************************
@@ -140,7 +151,7 @@
                         }else {
                             $("html,body").animate({scrollTop: $('#cf-control').offset().top }, 1000);
                         }
-                        fnSearch();
+                        fnSearch('custom');
                         break;
                     default:
                         return;

@@ -23,7 +23,7 @@
             htmlCart = fnCreateHtml({'type':'photo-none'},10);
             $cfcart.data('empCache',htmlCart).html(htmlCart);
             $cfshelf.html(htmlShelf);
-            fnSearch('init',["no701"]);
+            fnSearch('init',["no701","no702"]);
         };
             // <img src="image/no0595.jpg">
             // <div class="photo"><img scr="image/no0595.jpg" alt=""></div>

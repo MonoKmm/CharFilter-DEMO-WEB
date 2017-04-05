@@ -188,7 +188,7 @@
         // CharFilter
         // ***************************************
         var option = {
-            url: 'data/charlist.json'
+            url: 'data/charlist4239.json'
         };
         var cf = new CharFilter(option);
         var initData = function () {

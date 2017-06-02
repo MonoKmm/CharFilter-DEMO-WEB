@@ -14,7 +14,7 @@
             charArr = data;
             var htmlShelf = '';
             var htmlCart = '';
-            for (var i=0,len=data.length<36?36:data.length;i<len;i++){
+            for (var i=0,len=data.length<38?38:data.length;i<len;i++){
                 var htmlData = i<data.length ?
                     ('class="photo"><img src="'+ data[i]['src'] +'" data-num="'+ data[i]['id'] +'"') :
                     'class="photo-none"><img ';
@@ -23,7 +23,7 @@
             htmlCart = fnCreateHtml({'type':'photo-none'},10);
             $cfcart.data('empCache',htmlCart).html(htmlCart);
             $cfshelf.html(htmlShelf);
-            fnSearch('init',["no704","no705"]);
+            fnSearch('init',["no706","no707"]);
         };
             // <img src="image/no0595.jpg">
             // <div class="photo"><img scr="image/no0595.jpg" alt=""></div>
@@ -188,7 +188,7 @@
         // CharFilter
         // ***************************************
         var option = {
-            url: 'data/charlist4240.json'
+            url: 'data/charlist4241.json'
         };
         var cf = new CharFilter(option);
         var initData = function () {

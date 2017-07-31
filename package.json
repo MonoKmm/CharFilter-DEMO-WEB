@@ -1,0 +1,24 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "![head](https://github.com/MonoKmm/Images-folder/blob/master/CharFilter/head.jpg)\r #### 这是一个游戏账号筛选系统的功能页面之一  \r ## 想看看筛选功能 访问这里： [预览效果](https://monokmm.github.io/CharFilter-DEMO-WEB/)  \r ## 对筛选插件CharFilter感兴趣 访问这里：[插件项目](https://github.com/MonoKmm/CharFliter/blob/master/README.md)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MonoKmm/CharFilter-DEMO-WEB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MonoKmm/CharFilter-DEMO-WEB/issues"
+  },
+  "homepage": "https://github.com/MonoKmm/CharFilter-DEMO-WEB#readme",
+  "devDependencies": {
+    "express": "^4.15.3",
+    "webpack": "^3.4.1",
+    "webpack-dev-middleware": "^1.12.0"
+  }
+}

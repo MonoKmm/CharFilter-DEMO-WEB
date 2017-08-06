@@ -1,0 +1,242 @@
+
+html,body {
+    margin: 0;
+    padding: 0;
+    /*background-color: #00b7d5;*/
+    /*background: url("../image/bg-pattern.png"), #00acc8;*/
+    background: url("../image/view/bg-pattern.png"),linear-gradient(to right, #0096b2, #00acc8, #0096b2);
+}
+/***************************************
+   Chapter Styles
+***************************************/
+#content-warp {
+    padding-top: 70px;
+}
+main {
+
+}
+aside {
+
+    /*margin-left: -15px;*/
+}
+/*cf-box*/
+.cf-box {
+    width: 100%;
+    text-align:center;
+    display: inline-block;
+    padding-top: 6px;
+    padding-bottom: 5px;
+    position: relative;
+    overflow-x: hidden;
+    background-color: #00353e;
+    border-radius: 10px 10px 0 0;
+    -webkit-box-shadow:1px 7px 15px rgb(0, 40, 46) inset;
+}
+.photo {
+    margin-right: 0px;
+    display:inline-block;
+    border: solid 2px #004c60;
+    border-radius: 10px;
+    margin-top: 4px;
+}
+.photo img {
+
+}
+.photo:hover {
+    border: solid 2px #ec5b51;
+}
+.photo-none {
+    margin-right: 0px;
+    display:inline-block;
+    border: solid 2px #003a43;
+    border-radius: 5px;
+    margin-top: 4px;
+}
+.photo-none img {
+    opacity:0;
+}
+/*cf-box-scroll-style*/
+.cf-box::-webkit-scrollbar {
+    width: 5px;
+}
+.cf-box::-webkit-scrollbar-track {
+    /*border-radius: 10px;*/
+}
+.cf-box::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #ec5b51;
+}
+
+/*cf-box-shelf*/
+#cf-shelf {
+    border-right: solid 8px #595959;
+    border-radius: 10px 0 0 10px;
+    min-height: 350px;
+    max-height: 360px;
+    overflow-y: scroll;
+}
+#cf-shelf div {
+    width: auto;
+    height: auto;
+
+}
+#cf-shelf img {
+    width: 76px;
+    height: 76px;
+}
+/*cf-box-cart*/
+#cf-cart {
+    max-height: 200px;
+}
+#cf-cart div {
+    width: auto;
+    height: auto;
+}
+#cf-cart img {
+    width: 62px;
+    height: 62px;
+}
+
+/*cf-cart-toggle*/
+.cf-btn-rbtoggle {
+    background-color: #00d2ee!important;
+    border-top: solid 2px #5ec6d1 !important;
+}
+#cf-cart-toggle-btn{
+    width: 100%;
+    background-color: #e1594f;
+    color: #f8f8f8;
+    font-size: 16px;
+    margin-bottom: -2px;
+    border-top: solid 2px #ec807f;
+    border-radius: 0;
+    display: none;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    #cf-cart-toggle-btn {
+        display: block;
+    }
+    #cf-cart-toggle-target {
+        display: none;
+    }
+    #cf-cart-toggle {
+        /*display: none;*/
+        position: fixed;
+        left:0;
+        right:0;
+        bottom:0;
+    }
+    #cf-cart {
+        border-radius: 0;
+        -webkit-box-shadow: none;
+    }
+}
+@media (min-width: 768px) {
+    #cf-cart-toggle-target {
+        display: block;
+    }
+}
+/*button*/
+.btn-justified-custom {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+}
+.btn-justified-custom > .btn,
+.btn-justified-custom > .btn-group {
+    display: table-cell;
+    float: none;
+    width: 1%;
+    border-radius:0 0 10px 10px;
+}
+.btn-justified-custom > .btn-group .btn {
+    width: 100%;
+}
+.btn-default-custom {
+    color: #ffffff;
+
+    background-color: #ec5b51;
+    border-radius:0 0 10px 10px;
+}
+.btn-default-custom:focus,
+.btn-default-custom.focus {
+    color: #fff6fc;
+    /*background-color: #e6e6e6;*/
+    /*border-color: #f8f8f8;*/
+}
+.btn-default-custom:hover {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #e6e6e6;
+}
+/*.btn-default-custom:active,*/
+/*.btn-default-custom.active,*/
+/*.open > .dropdown-toggle.btn-default-custom {*/
+    /*color: #333;*/
+    /*background-color: #e6e6e6;*/
+    /*border-color: #e6e6e6;*/
+/*}*/
+/*button mid*/
+#control-undo {
+    border-left:solid 2px #e6e6e6;
+    border-right:solid 2px #e6e6e6;
+}
+/*control*/
+#cf-control {
+    color: #ffffff;
+    border-radius:10px 10px 10px 10px;
+    margin-top: -5px;
+}
+
+/*cf-text*/
+#cf-text {
+    color: #f1f1f1;
+}
+/*cf-table*/
+#cf-list {
+    background-color: #eb5d53;
+    color: rgb(231, 231, 231);
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding:2px;
+    -webkit-box-shadow:1px 3px 15px rgb(40, 12, 8) inset;
+}
+#cf-list .container {
+
+}
+.cf-tr-details {
+    font-size: large;
+    vertical-align: middle;
+}
+
+#cf-list table{
+    margin-top: 20px;
+
+}
+#cf-list table td div {
+    /*width: 62px;
+    height: 62px;*/
+    /*margin-left: -2px;*/
+    display:inline-block;
+    border: solid 1px #FFE4E1;
+}
+#cf-list thead{
+    display: none;
+
+}
+.table-massage {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}

@@ -2,4 +2,5 @@
 .*.*
 !.gitignore
 !/src/
+!/.git/
 !index.template.html

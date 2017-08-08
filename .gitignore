@@ -1,3 +1,4 @@
-node_modules
-dist
-build
+/*
+!.gitignore
+!src
+!index.template.html

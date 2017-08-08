@@ -240,3 +240,7 @@ aside {
     margin-top: 20px;
     font-size: 18px;
 }
+/* spritesConfig*/
+.icon-resize-62 {
+    background-size: 62px;
+}
